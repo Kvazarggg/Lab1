@@ -124,6 +124,23 @@ public class Cinema {
         sessionDuration = LocalTime.of(hours, minutes);
     }
 
+    @Override
+    public String toString() {
+        return "Cinema{" +
+                "movieTitle='" + movieTitle + '\'' +
+                ", day=" + day +
+                ", month=" + month +
+                ", year=" + year +
+                ", hours=" + hours +
+                ", minutes=" + minutes +
+                ", dateAnTimeOfTheSession=" + dateAnTimeOfTheSession +
+                ", sessionDuration=" + sessionDuration +
+                ", genre='" + genre + '\'' +
+                ", budget=" + budget +
+                ", scan=" + scan +
+                ", currentYear=" + currentYear +
+                '}';
+    }
 
     public void OutputInfo() {
         System.out.println("\n");

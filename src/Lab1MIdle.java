@@ -41,7 +41,8 @@ public class Lab1MIdle {
         {
             if (movie[i].dateAnTimeOfTheSession.getHour() > 18 && movie[i].sessionDuration.getHour() > 1 || (movie[i].sessionDuration.getHour() == 1 && movie[i].sessionDuration.getMinute() > 40))
             {
-                movie[i].OutputInfo();
+                // movie[i].OutputInfo();
+                System.out.println(movie[i].toString());
             }
         }
     }
