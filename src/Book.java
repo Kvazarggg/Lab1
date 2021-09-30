@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Library {
+public class Book {
     String author;
     int numberOfPages;
     int edition;

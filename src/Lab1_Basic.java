@@ -8,28 +8,28 @@ public class Lab1_Basic {
         int inCountBook = scan.nextInt();
 
 
-        Library[] book = new Library[inCountBook];
-        for (int i = 0; i < book.length; i++)
+        Book[] library = new Book[inCountBook];
+        for (int i = 0; i < library.length; i++)
         {
-            book[i] = new Library();
+            library[i] = new Book();
             scan.nextLine();
             System.out.print("Введите автора книги: ");
-            book[i].setAuthor(scan.nextLine());
+            library[i].setAuthor(scan.nextLine());
             System.out.print("Введите количество страниц: ");
-            book[i].setNumberOfPages(scan.nextInt());
+            library[i].setNumberOfPages(scan.nextInt());
             System.out.print("Введите тираж: ");
-            book[i].setEdition(scan.nextInt());
+            library[i].setEdition(scan.nextInt());
             System.out.print("Введите год издания: ");
-            book[i].setYearPublishing(scan.nextInt());
+            library[i].setYearPublishing(scan.nextInt());
         }
 
         System.out.print("\nСведения о книгах в библиотеке, в которых количество страниц больше 150: ");
 
         for (int i = 0; i < inCountBook; i++)
         {
-            if (book[i].numberOfPages > 150)
+            if (library[i].numberOfPages > 150)
             {
-                book[i].OutputInfo();
+                library[i].OutputInfo();
             }
         }
 

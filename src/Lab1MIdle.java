@@ -10,39 +10,39 @@ public class Lab1MIdle {
         System.out.print("Введите количество фильмов: ");
         int inCountMovie = scan.nextInt();
 
-        Cinema[] movie = new Cinema[inCountMovie];
+        Movie[] cinema = new Movie[inCountMovie];
 
-        for (int i = 0; i < movie.length; i++) {
-            movie[i] = new Cinema();
+        for (int i = 0; i < cinema.length; i++) {
+            cinema[i] = new Movie();
             scan.nextLine();
             System.out.print("Введите название фильма: ");
-            movie[i].setMovieTitle(scan.nextLine().trim());
+            cinema[i].setMovieTitle(scan.nextLine().trim());
             System.out.print("Введите Дату и время сеанса (Год/Месяц/День/Час/Минуты): ");
 //            movie[i].setYear(scan.nextInt());
 //            movie[i].setMonth(scan.nextInt());
 //            movie[i].setDay(scan.nextInt());
 //            movie[i].setHours(scan.nextInt());
 //            movie[i].setMinutes(scan.nextInt());
-            movie[i].DateAnTimeOfTheSession(scan.nextInt(), scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt());
+            cinema[i].DateAnTimeOfTheSession(scan.nextInt(), scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt());
             System.out.print("Введите продолжительность сеанса (Час/Минуты): ");
 //            movie[i].setHours(scan.nextInt());
 //            movie[i].setMinutes(scan.nextInt());
-            movie[i].SessionDuration(scan.nextInt(),scan.nextInt());
+            cinema[i].SessionDuration(scan.nextInt(),scan.nextInt());
             scan.nextLine();
             System.out.print("Введите жанр: ");
-            movie[i].setGenre(scan.nextLine());
+            cinema[i].setGenre(scan.nextLine());
             System.out.print("Введите бюджет: ");
-            movie[i].setBudget(scan.nextInt());
+            cinema[i].setBudget(scan.nextInt());
         }
 
         System.out.print("\nФильмы начинающиеся после 18:00 и с продолжительностью сеанса более 1 часа и 40 минут:");
 
-        for (int i = 0; i < movie.length; i++)
+        for (int i = 0; i < cinema.length; i++)
         {
-            if (movie[i].dateAnTimeOfTheSession.getHour() > 18 && movie[i].sessionDuration.getHour() > 1 || (movie[i].sessionDuration.getHour() == 1 && movie[i].sessionDuration.getMinute() > 40))
+            if (cinema[i].dateAnTimeOfTheSession.getHour() > 18 && cinema[i].sessionDuration.getHour() > 1 || (cinema[i].sessionDuration.getHour() == 1 && cinema[i].sessionDuration.getMinute() > 40))
             {
                 // movie[i].OutputInfo();
-                System.out.println(movie[i].toString());
+                System.out.println(cinema[i].toString());
             }
         }
     }

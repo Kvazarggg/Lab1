@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Scanner;
 
-public class Cinema {
+public class Movie {
     String movieTitle;
     
     LocalDateTime dateAnTimeOfTheSession;
