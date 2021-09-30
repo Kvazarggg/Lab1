@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cinema {
     String movieTitle;
-    int day, month, year, hours, minutes;
+    
     LocalDateTime dateAnTimeOfTheSession;
     LocalTime sessionDuration;
     String genre;
@@ -20,84 +20,7 @@ public class Cinema {
         return movieTitle;
     }
 
-    int currentYear = 2021;
-
-    public void setYear(int year) {
-        int trueYear = year;
-        if (year > currentYear)
-        {
-            System.out.println("Некорректное значение года. Кажется, что вы ввели год который ещё не наступил:)");
-            System.out.print("Введите год: ");
-            trueYear = scan.nextInt();
-        }
-        else if (year< 0) {
-            System.out.println("Некорректное значение года. Кажется, что вы ввели отрицательное значение:)");
-            System.out.print("Введите год: ");
-            trueYear = scan.nextInt();
-        }
-
-        this.year = trueYear;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setDay(int day){
-        int trueDay = day;
-        if(trueDay < 0 || trueDay > 31) {
-            System.out.print("Ошибка ввода. Попробуйте снова: ");
-            trueDay = scan.nextInt();
-        }
-
-        this.day = trueDay;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setMonth(int month){
-        int trueMonth = month;
-        if(trueMonth < 0 || trueMonth > 12) {
-            System.out.print("Ошибка ввода. Попробуйте снова: ");
-            trueMonth = scan.nextInt();
-        }
-
-        this.month = trueMonth;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setHours(int hours) {
-        int trueHours = hours;
-        if(trueHours < 0 || trueHours > 24) {
-            System.out.print("Ошибка ввода. Попробуйте снова: ");
-            trueHours = scan.nextInt();
-        }
-        this.hours = trueHours;
-    }
-
-    public int getHours() {
-        return hours;
-    }
-
-    public void setMinutes(int minutes) {
-        int trueMinutes = minutes;
-        if(trueMinutes < 0 || trueMinutes > 60) {
-            System.out.print("Ошибка ввода. Попробуйте снова: ");
-            trueMinutes = scan.nextInt();
-        }
-        this.minutes = trueMinutes;
-    }
-
-    public int getMinutes() {
-        return minutes;
-    }
-
-    public void setGenre(String genre) {
+     public void setGenre(String genre) {
         this.genre = genre;
     }
 
@@ -113,10 +36,9 @@ public class Cinema {
         return budget;
     }
 
-    public void DateAnTimeOfTheSession()
+    public void DateAnTimeOfTheSession(int day, int month, int year, int hours, int minutes)
     {
         dateAnTimeOfTheSession = LocalDateTime.of(year, month, day, hours, minutes);
-
     }
 
     public void SessionDuration()
@@ -128,11 +50,6 @@ public class Cinema {
     public String toString() {
         return "Cinema{" +
                 "movieTitle='" + movieTitle + '\'' +
-                ", day=" + day +
-                ", month=" + month +
-                ", year=" + year +
-                ", hours=" + hours +
-                ", minutes=" + minutes +
                 ", dateAnTimeOfTheSession=" + dateAnTimeOfTheSession +
                 ", sessionDuration=" + sessionDuration +
                 ", genre='" + genre + '\'' +
