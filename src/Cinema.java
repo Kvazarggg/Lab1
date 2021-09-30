@@ -41,7 +41,7 @@ public class Cinema {
         dateAnTimeOfTheSession = LocalDateTime.of(year, month, day, hours, minutes);
     }
 
-    public void SessionDuration()
+    public void SessionDuration(int hours, int minutes)
     {
         sessionDuration = LocalTime.of(hours, minutes);
     }
@@ -55,7 +55,6 @@ public class Cinema {
                 ", genre='" + genre + '\'' +
                 ", budget=" + budget +
                 ", scan=" + scan +
-                ", currentYear=" + currentYear +
                 '}';
     }
 
