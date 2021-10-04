@@ -54,7 +54,6 @@ public class Movie {
                 ", sessionDuration=" + sessionDuration +
                 ", genre='" + genre + '\'' +
                 ", budget=" + budget +
-                ", scan=" + scan +
                 '}';
     }
 
