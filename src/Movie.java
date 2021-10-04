@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Movie {
     String movieTitle;
-    
+
     LocalDateTime dateAnTimeOfTheSession;
     LocalTime sessionDuration;
     String genre;
@@ -20,7 +20,7 @@ public class Movie {
         return movieTitle;
     }
 
-     public void setGenre(String genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 
@@ -36,13 +36,11 @@ public class Movie {
         return budget;
     }
 
-    public void DateAnTimeOfTheSession(int day, int month, int year, int hours, int minutes)
-    {
+    public void DateAnTimeOfTheSession(int year, int month, int day, int hours, int minutes) {
         dateAnTimeOfTheSession = LocalDateTime.of(year, month, day, hours, minutes);
     }
 
-    public void SessionDuration(int hours, int minutes)
-    {
+    public void SessionDuration(int hours, int minutes) {
         sessionDuration = LocalTime.of(hours, minutes);
     }
 
