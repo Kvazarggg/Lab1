@@ -18,15 +18,8 @@ public class Lab1MIdle {
             System.out.print("Введите название фильма: ");
             cinema[i].setMovieTitle(scan.nextLine().trim());
             System.out.print("Введите Дату и время сеанса (Год/Месяц/День/Час/Минуты): ");
-//            movie[i].setYear(scan.nextInt());
-//            movie[i].setMonth(scan.nextInt());
-//            movie[i].setDay(scan.nextInt());
-//            movie[i].setHours(scan.nextInt());
-//            movie[i].setMinutes(scan.nextInt());
             cinema[i].DateAnTimeOfTheSession(scan.nextInt(), scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt());
             System.out.print("Введите продолжительность сеанса (Час/Минуты): ");
-//            movie[i].setHours(scan.nextInt());
-//            movie[i].setMinutes(scan.nextInt());
             cinema[i].SessionDuration(scan.nextInt(),scan.nextInt());
             scan.nextLine();
             System.out.print("Введите жанр: ");
@@ -41,7 +34,6 @@ public class Lab1MIdle {
         {
             if (cinema[i].dateAnTimeOfTheSession.getHour() > 18 && cinema[i].sessionDuration.getHour() > 1 || (cinema[i].sessionDuration.getHour() == 1 && cinema[i].sessionDuration.getMinute() > 40))
             {
-                // movie[i].OutputInfo();
                 System.out.println(cinema[i].toString());
             }
         }
