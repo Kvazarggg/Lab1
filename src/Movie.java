@@ -58,13 +58,4 @@ public class Movie {
                 '}';
     }
 
-    public void OutputInfo() {
-        System.out.println("\n");
-        System.out.println("Название фильма: " + movieTitle);
-        System.out.println("Дата и время сеанса : " + dateAnTimeOfTheSession);
-        System.out.println("Продолжительность сеанса : " + sessionDuration);
-        System.out.println("Жанр : " + genre);
-        System.out.println("Бюджет : " + budget);
-        System.out.println();
-    }
 }
